@@ -29,9 +29,13 @@ public class OldChunkNotifier extends Module {
     private final SettingGroup sgGeneral = settings.getDefaultGroup();
 
     public enum DimensionMode {
-        OVERWORLD,
-        NETHER,
-        BOTH
+        Overworld,
+        Nether,
+        End,
+        All
+
+
+
     }
 
     public enum ChunkTypeMode {
@@ -125,7 +129,7 @@ public class OldChunkNotifier extends Module {
     public final Setting<DimensionMode> dimensionMode = sgGeneral.add(new EnumSetting.Builder<DimensionMode>()
         .name("dimension-mode")
         .description("Choose where the module will detect old chunks.")
-        .defaultValue(DimensionMode.BOTH)
+        .defaultValue(DimensionMode.All)
         .build()
     );
 
@@ -158,8 +162,9 @@ public class OldChunkNotifier extends Module {
         if (mc.player.getAbilities().allowFlying) return;
 
         // Check selected dimension mode
-        if ((dimensionMode.get() == DimensionMode.NETHER && mc.world.getRegistryKey() != World.NETHER) ||
-            (dimensionMode.get() == DimensionMode.OVERWORLD && mc.world.getRegistryKey() != World.OVERWORLD)) return;
+        if ((dimensionMode.get() == DimensionMode.Nether && mc.world.getRegistryKey() != World.NETHER) ||
+            (dimensionMode.get() == DimensionMode.End && mc.world.getRegistryKey() != World.END) ||
+            (dimensionMode.get() == DimensionMode.Overworld && mc.world.getRegistryKey() != World.OVERWORLD)) return;
 
         if (oldChunks.size() > 1000) {
             oldChunks.removeFirst();

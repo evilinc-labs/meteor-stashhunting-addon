@@ -1,12 +1,13 @@
-# jeff mod (For minecraft 1.21.1, 1.21.4, 1.21.5)
+# jeff mod (For minecraft 1.21.1, 1.21.4, 1.21.5, 1.21.8, 1.21.10, 1.21.11)
 #### Make an issue or DM me on discord `0x658` with any questions (Check the FAQ first)
 #### Pull Requests are welcome, please make them to the 1.21.1 branch.
 #### Check the [Wiki](https://github.com/miles352/meteor-stashhunting-addon/wiki) for a full list of features and options.
 ## Features
+### Modules
 - ElytraFlyPlusPlus
   - Has a bounce mode with a baritone obstacle passer for highways, including ring-roads.
-  - Motion Y Boost mode can go up to 200 bps. (1.20.4 ViaVersion required for 2b2t, and you must be touching a wall)
-  - Fake fly option allows you to fly with a chestplate on to minimize lost durability. (Does not work on 2b2t)
+  - Motion Y Boost mode can go up to 200 bps. (Patched on 2b2t)
+  - Fake fly option allows you to fly with a chestplate on to minimize lost durability. (Patched on 2b2t)
 - TrailFollower (Credit to [WarriorLost](https://github.com/warriorlost) for creating the original TrailFollower this was based off)
   - Follows trails in all dimensions using either pitch40 or baritone. May break on path splits or other cases.
 - TrailMaker
@@ -43,6 +44,11 @@
   - Highlights item frames that have mapart in them, and banners.
 - AutoPortal (Made by [xqyet](https://github.com/xqyet))
   - Automatically places and lights a portal.
+### HUD
+- Weather
+  - Displays the current weather in the world.
+- EntityList
+  - Displays the count of all the entities within render distance. (Made by [g-a-l-a-x-i-a](https://github.com/g-a-l-a-x-i-a))
 
 ## FAQ
 - Q: How do I install this / where is the jar file?

@@ -1,5 +1,6 @@
 package com.stash.hunt;
 
+import com.stash.hunt.hud.EntityList;
 import com.stash.hunt.hud.Weather;
 import com.stash.hunt.modules.*;
 import com.stash.hunt.modules.searcharea.SearchArea;
@@ -52,6 +53,7 @@ public class Addon extends MeteorAddon {
 //        Modules.get().add(new StashMoverListener());
 //        Modules.get().add(new PacketGrimFly());
         Modules.get().add(new AutoEXPPlus());
+
 //        Modules.get().add(new YRelog());
 
         boolean baritoneLoaded = checkModLoaded("baritone", "baritone-meteor");
@@ -81,6 +83,9 @@ public class Addon extends MeteorAddon {
         }
 
         Hud.get().register(Weather.INFO);
+
+        Hud.get().register(EntityList.INFO);
+
     }
 
     @Override
